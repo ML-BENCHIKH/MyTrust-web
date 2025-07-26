@@ -17,59 +17,25 @@ Elle vise à offrir une expérience fluide, moderne et sécurisée aux clients, 
 ---
 ## Structure de projet
 
-my-trust/
-├── app/                          # ✅ Next.js App Router (pages/layouts)
-│   ├── layout.tsx                # Root layout with container & theme
-│   ├── page.tsx                  # Home page using composed sections
-│   └── favicon.ico
-│
-├── components/                   # 🧩 Shared UI & layout wrappers
-│   ├── ui/                       # ✅ ShadCN components (managed by CLI)
-│       ├── button.tsx
-│       ├── input.tsx
-│       └── ...etc
-│   
-│
-├── features/                     # 💡 Features pages 
-│   └── home /                    # Create branche same as feature page part you are working on it
-│       ├── navbar/
-│       │   └── Navbar.tsx
-│       ├── carousel/
-│       │   └── Carousel.tsx
-│       ├── products-overview/
-│       │   └── ProductsOverview.tsx
-│       ├── news/
-│       │   └── NewsSection.tsx
-│       ├── clients-trust/
-│       │   └── ClientsTrust.tsx
-│       ├── product-cards/
-│       │   └── ProductCards.tsx
-│       ├── newsletter/
-│       │   ├── NewsletterForm.tsx
-│       │   └── helpers.ts
-│       └── footer/
-│           └── Footer.tsx
-│
-├── shared/                       # ♻️ Shared logic between all layers
-│   ├── types/
-│   │   └── newsletter.ts         # `export { type NewsletterFormData to assure harmony between frontend and backend data types }`
-│   ├── validators/
-│   │   └── newsletter.schema.ts  # ✅ Zod schema for form
-│   ├── lib/
-│   │   ├── utils.ts              # formatDate, devLog, etc.
-│   │   └── auth.ts               # (for future login logic)
-│
-│
-├── public/                       # Static assets (images, icons, etc.)
-│   └── logo.png
-│
-├── .gitignore                    # Hide .env, .DS_Store, etc.
-├── next.config.js
-├── postcss.config.js
-├── tailwind.config.ts            # ShadCN theme + colors
-├── tsconfig.json
-├── package.json
-└── README.md
+├───MyTrust  
+    ├───public    
+    └───src    
+        ├───app  
+        ├───components  
+        │  └───ui  
+        ├───features  
+        │   ├───Acceuil  
+        │   │   ├───Actualites  
+        │   │   ├───Footer  
+        │   │   ├───HeroSection  
+        │   │   ├───Navbar  
+        │   │   ├───NewsLetter  
+        │   │   ├───Nos Produits & Services  
+        │   │   └───Partenaires  
+        │   └───login  
+        ├───Lib  
+        └───Shared  
+            └───Types  
 
 ## 🚀 Technologies utilisées
 
