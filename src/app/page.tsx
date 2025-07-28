@@ -1,14 +1,14 @@
 import Navbar from "@/features/Acceuil/Navbar";
-
+import { ImageCarousel } from "@/features/Acceuil/ImageCarousel";
 export default function Home() {
-    return (
-        <>
-            <Navbar/>
-            <main className="mt-32 w-full flex flex-col items-center justify-center min-h-[60vh]">
-                <div className="w-full max-w-4xl bg-gray-100 rounded-2xl shadow-inner p-12 flex flex-col items-center">
-                    <h1 className="text-3xl font-bold mb-4 text-gray-800">My Trust</h1>
-                </div>
-            </main>
-        </>
-    );
+  return (
+    <main className=" flex justify-center flex min-h-screen flex-col text-gray-900 pt-8">
+      <div className="w-full md:w-[80%] mx-auto overflow-hidden">
+        <Navbar />
+        <div className="  px-6 md:px-10 pt-6 rounded-[10%]">
+          <ImageCarousel />
+        </div>
+      </div>
+    </main>
+  );
 }
