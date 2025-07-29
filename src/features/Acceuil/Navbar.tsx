@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
     return (
         <nav
             className="fixed top-6 left-1/2 max-w-[97%] w-full h-24 -translate-x-1/2 z-50 bg-white rounded-[10] shadow-lg px-8 py-3 flex items-center justify-between gap-5 backdrop-blur-md border border-gray-200">
             <div className="flex items-center min-w-[90px] gap-l">
-                <Image src="/logo-small.png" alt="Logo Trust" width={90} height={90}/>
+                <Link href="/">
+                    <Image src="/logo-small.png" alt="Logo Trust" width={90} height={90}/>
+                </Link>
             </div>
             <div className="flex items-center gap-5">
                 <BoutonDefilant href="a-propos" text="À propos de nous" items={[
@@ -98,7 +101,13 @@ interface BoutonDefilantItem {
     subItems?: BoutonDefilantSubItem[];
 }
 
-function BoutonDefilant({text, items, href}: { text: string; items: BoutonDefilantItem[]; href: string }) {
+function BoutonDefilant({
+                            text, items, href
+                        }: {
+    text: string;
+    items: BoutonDefilantItem[];
+    href: string
+}) {
     return (
         <div className="relative group">
             <a href={href}
