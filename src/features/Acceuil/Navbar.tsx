@@ -21,7 +21,10 @@ export default function Navbar() {
                             {label: "Assurance Auto", href: "/assu-particuliers/auto"},
                             {label: "Assurance Trust bon conducteur", href: "/assu-particuliers/trust-bon-conducteur"},
                             {label: "Assurance multirisques habitation", href: "/assu-particuliers/habitation"},
-                            {label: "Assurance catastrophes naturelles", href: "/assu-particuliers/catastrophes-naturelles"},
+                            {
+                                label: "Assurance catastrophes naturelles",
+                                href: "/assu-particuliers/catastrophes-naturelles"
+                            },
                             {label: "Assistance voyage", href: "/assu-particuliers/assistance-voyage"},
                             {label: "Assurance bâteau de plaisance", href: "/assu-particuliers/bateau-plaisance"},
                         ]
@@ -29,18 +32,30 @@ export default function Navbar() {
                     {
                         label: "Assurance Professionels", href: "/assu-professionels", subItems: [
                             {label: "Assurance Véhicule Professionnel", href: "/assu-professionels/vehicule"},
-                            {label: "Assurance Responsabilité Civile Professionnelle", href: "/assu-professionels/responsabilite-civile-pro"},
-                            {label: "Assurance Multirisques Professionnelle", href: "/assu-professionels/multirisques-pro"}
+                            {
+                                label: "Assurance Responsabilité Civile Professionnelle",
+                                href: "/assu-professionels/responsabilite-civile-pro"
+                            },
+                            {
+                                label: "Assurance Multirisques Professionnelle",
+                                href: "/assu-professionels/multirisques-pro"
+                            }
                         ]
                     },
                     {
                         label: "Assurance Entreprises", href: "/assu-entreprises", subItems: [
                             {label: "Assurance RC", href: "/assu-entreprises/rc"},
                             {label: "Assurance Engineering", href: "/assu-entreprises/engineering"},
-                            {label: "Assurance des marchandises transportées", href: "/assu-entreprises/marchandises-transport"},
+                            {
+                                label: "Assurance des marchandises transportées",
+                                href: "/assu-entreprises/marchandises-transport"
+                            },
                             {label: "Assurance Patrimoine", href: "/assu-entreprises/patrimoine"},
                             {label: "Assurance risques spéciaux", href: "/assu-entreprises/risques-speciaux"},
-                            {label: "Prévoyance collective des collaborateurs", href: "/assu-entreprises/prevoyance-collective"},
+                            {
+                                label: "Prévoyance collective des collaborateurs",
+                                href: "/assu-entreprises/prevoyance-collective"
+                            },
                         ]
                     },
                     {label: "Simulation", href: "/simulation"},
@@ -98,7 +113,7 @@ function BoutonDefilant({text, items, href}: { text: string; items: BoutonDefila
                 {items.map((item, idx) => (
                     <div key={idx} className="relative group/item">
                         <a href={item.href}
-                           className="flex px-4 py-3 text-gray-800 font-medium rounded-lg hover:bg-orange-50 transition justify-between items-center">
+                           className="flex px-4 py-3 text-gray-800 hover:text-[#E94A2C]  font-medium rounded-lg hover:bg-orange-100 transition justify-between items-center">
                             {item.label}
                             {item.subItems && item.subItems.length > 0 && (
                                 <svg className="w-3 h-3 ml-2" fill="none" stroke="#E94A2C" strokeWidth="3"
@@ -115,7 +130,7 @@ function BoutonDefilant({text, items, href}: { text: string; items: BoutonDefila
                                     className="absolute left-full top-0 min-w-max bg-white rounded-xl shadow-xl border border-white ml-3 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0 translate-x-2 transition-all duration-200 z-50 pointer-events-none group-hover/item:pointer-events-auto hover:opacity-100 hover:translate-x-0 hover:pointer-events-auto flex flex-col py-2 px-2 gap-1">
                                     {item.subItems.map((subItem, subIdx) => (
                                         <a key={subIdx} href={subItem.href}
-                                           className="block px-4 py-2 text-gray-800 font-medium rounded-lg hover:bg-orange-50 transition">
+                                           className="block px-4 py-2 hover:text-[#E94A2C] text-gray-800 font-medium rounded-lg hover:bg-orange-100 transition">
                                             {subItem.label}
                                         </a>
                                     ))}
