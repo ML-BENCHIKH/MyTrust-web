@@ -25,7 +25,7 @@ const cards = [
 export default function HomeServices() {
     return (
         <section
-            className="w-[96vw] max-w-full mx-auto relative overflow-hidden md:bg-gray-100/60 rounded-xl md:border-1 border-gray-100 px-1 py-3 my-7">
+            className="w-[96vw] max-w-full mx-auto relative overflow-hidden md:bg-gray-100/60 rounded-xl md:border-1 border-gray-100 px-1 py-3 mt-7">
             <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-stretch">
                 <div className="flex-10/12 flex flex-col md:flex-col justify-center items-stretch relative ">
 
