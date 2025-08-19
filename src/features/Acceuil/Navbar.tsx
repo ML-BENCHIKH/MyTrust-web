@@ -15,7 +15,8 @@ export default function Navbar() {
 
 function NavDesktop() {
     return (<div className="hidden md:block">
-        <nav className="w-full bg-white px-10 py-3 border-b font-semibold fixed top-0 left-0 z-50">
+        <nav
+            className="w-full bg-white/85 backdrop-blur-lg h-16 py-1 text-sm shadow-xs font-semibold fixed top-0 left-0 z-50">
             {/* Barre de navigation principale */}
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
                 {/* Logo */}
@@ -29,7 +30,6 @@ function NavDesktop() {
                 </div>
                 {/* Liens principaux */}
                 <div className="hidden md:flex items-center space-x-6 ">
-                    <AnimatedLink href="#">Trust Assurances</AnimatedLink>
                     <AnimatedLink href="#">Particuliers</AnimatedLink>
                     <AnimatedLink href="#">Professionnels</AnimatedLink>
                     <AnimatedLink href="#">Entreprises</AnimatedLink>
@@ -37,7 +37,7 @@ function NavDesktop() {
                     <AnimatedLink href="#">Trouver une agence</AnimatedLink>
                 </div>
                 {/* Bouton Espace clients */}
-                <AnimatedLink href="#" className="text-orange-600 hover:text-orange-800">
+                <AnimatedLink href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
                          stroke="currentColor" className="w-6 h-6 mr-2">
                         <circle cx="12" cy="7" r="5" stroke="currentVolor" strokeWidth="2.5"/>
@@ -50,11 +50,11 @@ function NavDesktop() {
 
         </nav>
         {/* Espace pour compenser la hauteur de la barre */}
-        <div className="h-20 w-full"/>
+        <div className="h-14 w-full"/>
         {/* Sous-menu */}
         <div
-            className="bg-white border-b text-sm font-semibold mt-3 pt-3 pb-3 transition-all duration-300 hidden md:block">
-            <div className="max-w-7xl mx-auto px-4 py-2 flex space-x-6">
+            className="bg-red-50/85 shadow-xs text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block">
+            <div className="max-w-7xl mx-auto px-4 py-1 flex space-x-6">
                 <AnimatedLink
                     href="#"
                     subLinks={[
@@ -118,13 +118,14 @@ function NavMobile() {
     ];
 
     return (
-        <div className="block md:hidden">
+        <div className="block md:hidden mt-15">
             {/* Overlay */}
             {isOpen && (
                 <div className="fixed inset-0 bg-opacity-40 z-40 transition-opacity duration-300"
                      onClick={() => setIsOpen(false)}/>
             )}
-            <nav className="w-full bg-white px-2 py-3 border-b font-semibold fixed top-0 left-0 z-50">
+            <nav
+                className="w-full bg-white/80 backdrop-blur-lg px-2 py-2 shadow-xs font-semibold fixed top-0 left-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
                     <div className="flex items-center py-2">
                         <Image src="/logo-large.png" alt="Trust Assurances"
@@ -132,7 +133,7 @@ function NavMobile() {
                                height={38}
                         />
                     </div>
-                    {/* Menu burger */}
+                    {/* Bouton burger */}
                     <button
                         className="flex flex-col items-center justify-center w-10 h-10 group"
                         aria-label="Ouvrir le menu"
@@ -147,9 +148,9 @@ function NavMobile() {
                     </button>
                 </div>
             </nav>
-            {/* Menu déroulant scrollable */}
+            {/* Menu déroulant */}
             <div
-                className={`fixed top-16 left-0 w-full bg-white shadow-lg z-50 transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'} max-h-[calc(100vh-4rem)] overflow-y-auto`}
+                className={`fixed top-16 left-0 w-full h-full bg-white/85 backdrop-blur-lg shadow-lg z-40 transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'} max-h-[calc(100vh-4rem)] overflow-y-auto`}
             >
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex flex-col divide-y divide-gray-200">
@@ -157,7 +158,7 @@ function NavMobile() {
                             <div key={link.label} className="py-3 flex flex-col">
                                 <div className="flex items-center justify-between">
                                     <Link href={link.href}
-                                          className="text-gray-700 text-base font-medium flex-1 focus:outline-none">
+                                          className="text-gray-600 text-[1rem] font-semibold flex-1 focus:outline-none">
                                         {link.label}
                                     </Link>
                                     {link.subLinks && (
@@ -181,7 +182,7 @@ function NavMobile() {
                                         </button>
                                     )}
                                 </div>
-                                {/* Sous-menu mobile animé */}
+                                {/* Sous-menu */}
                                 {link.subLinks && (
                                     <div
                                         className={`mt-2 ml-4 flex flex-row overflow-hidden transition-all duration-300 ease-in-out ${openSubMenus.includes(link.label) ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}
@@ -241,7 +242,7 @@ function AnimatedLink({href, children, className = "", subLinks, position = 0}: 
 
                 <div
                     style={{left: `calc(-7.8rem * ${position} + 15rem)`}}
-                    className="absolute top-full -translate-x-1/2 mt-0 min-w-140 bg-white border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50"
+                    className="absolute top-full -translate-x-1/2 mt-0 min-w-140 bg-red-50/80 backdrop-blur-sm text-gray-600 border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50"
                 >
 
                     <div className="grid grid-cols-2 gap-6 py-2 px-4 min-w-[280px]">
@@ -249,7 +250,7 @@ function AnimatedLink({href, children, className = "", subLinks, position = 0}: 
 
                             <div key={idx}>
                                 <Link href={sub.href}
-                                      className="block px-4 py-2  hover:bg-orange-50 hover:text-orange-600 whitespace-nowrap">
+                                      className="block px-4 py-2  hover:bg-white hover:text-orange-600 rounded-lg whitespace-nowrap">
                                     {sub.label}
                                 </Link>
                             </div>
