@@ -30,7 +30,7 @@ export default function HomeServices() {
                 <div className="flex-10/12 flex flex-col md:flex-col justify-center items-stretch relative ">
 
                     {/* Titre d'accroche desktop */}
-                    <div className="flex items-center justify-center gap-3 mt-0 md:mb-5">
+                    <div className="flex items-center justify-center gap-3 mt-0 md:mb-6">
                         <h1
                             className="hidden md:block text-3xl text-right md:text-4xl font-extrabold md:text-center text-gray-600 leading-tight">
                             Sérénité, confiance, mais avant tout...
@@ -49,7 +49,7 @@ export default function HomeServices() {
                         <span className="text-[#E94A2C] font-black uppercase tracking-wider text-4xl"
                         >ASSURANCE&nbsp;!</span>
                     </div>
-                    <div className="w-full flex justify-center mb-3 md:mb-7">
+                    <div className="w-full flex justify-center mb-3 md:mb-9">
                         <div
                             className="bg-orange-600/80 text-white px-6 py-2 rounded-lg font-semibold shadow-lg items-center gap-2 md:text-sm hidden md:flex">
                             <svg width="18" height="18" fill="white" viewBox="0 0 32 32" className="inline-block mr-2">
@@ -71,7 +71,7 @@ export default function HomeServices() {
                             <div key={card.title}
                                  className="flex flex-col items-center flex-1 group relative justify-center">
                                 <div
-                                    className="relative mb-5 w-[88vw] md:w-[360px] h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group cursor-pointer transition-all duration-300 border-2 border-amber-600/25 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
+                                    className="relative mb-5 w-[88vw] md:w-[360px] h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group cursor-default transition-all duration-300 border-2 border-amber-600/25 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
                                     <Image
                                         src={card.image}
                                         alt={card.alt}

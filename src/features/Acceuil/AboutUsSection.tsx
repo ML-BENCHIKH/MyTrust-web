@@ -3,11 +3,11 @@ import Image from 'next/image';
 export default function AboutUsSection() {
     return (
         <section
-            className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 px-1 py-8 flex flex-col items-center mb-4 md:mb-0">
+            className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 px-1 py-8 pb-0 flex flex-col items-center mb-4 md:mb-0">
             <div
                 className="w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mb-8 md:px-8">
                 {/* Logo desktop */}
-                <div className="hidden md:block flex-shrink-0 pt-14 pr-2 justify-start w-auto">
+                <div className="hidden md:block flex-shrink-0 pt-14 pr-12 justify-start w-auto">
                     <Image
                         src="/logo-trust.png"
                         alt="Logo Trust"
@@ -29,7 +29,7 @@ export default function AboutUsSection() {
                     <h2 className="text-2xl md:text-3xl font-bold text-orange-700 tracking-tight mb-4 text-center md:text-left">
                         Nous connaître
                     </h2>
-                    <p className="text-gray-700 text-md md:text-lg leading-relaxed text-center md:text-left">
+                    <p className="text-gray-700 text-[1rem] px-4 md:px-0 md:text-lg leading-relaxed text-center md:text-left">
                         TRUST Algeria est une société par actions créée en 1997 dans le cadre de l&#39;Ordonnance 95 - 07 du
                         25 Janvier 1995 qui a consacré l&#39;ouverture du marché algérien des assurances à l&#39;investissement
                         privé. Elle a débuté son activité le 28 février 1998 en tant que 1ère COMPAGNIE PRIVÉE
