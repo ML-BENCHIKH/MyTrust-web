@@ -37,7 +37,7 @@ export default function HomeServices() {
 
                         </h1>
                         <span
-                            className="hidden md:block text-[#E94A2C] font-black uppercase tracking-wider text-[2.5rem] text-center"
+                            className="hidden md:block text-orange-600 font-black uppercase tracking-wider text-[2.5rem] text-center"
                         >ASSURANCE&nbsp;!</span>
 
                     </div>
@@ -94,7 +94,7 @@ export default function HomeServices() {
                                         <p className="text-white text-bold mb-6 drop-shadow-lg">{card.description}</p>
                                         <Link
                                             href={`/services/${card.title.toLowerCase()}`}
-                                            className="bg-[#E94A2C] text-white hover:bg-[#BD3014] cursor-pointer font-semibold px-6 py-2 rounded transition">
+                                            className="bg-[#E94A2C] text-white hover:bg-[#BD3014] cursor-pointer font-semibold px-6 py-2 rounded-xl transition">
                                             En savoir plus
                                         </Link>
                                     </div>
