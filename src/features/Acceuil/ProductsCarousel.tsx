@@ -43,8 +43,8 @@ export default function ProductsCarousel() {
 
     return (
         <div
-            className="flex flex-row w-[96vw] max-w-full mx-auto relative overflow-hidden md:bg-gray-100/60 rounded-xl md:border-1 border-gray-100">
-            <div className="mb-8 ml-4 flex flex-col items-center justify-center gap-4">
+            className="flex flex-row w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 mb-3 md:mb-0">
+            <div className="hidden md:flex mb-8 ml-4 flex-col items-center justify-center gap-4">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center">
                     Nos produits & Services
                 </h2>
@@ -52,7 +52,15 @@ export default function ProductsCarousel() {
                     Découvrez une sélection de nos produits phares, nouveautés et offres incontournables.
                 </p>
             </div>
-            <div className="w-full max-w-4xl mx-8 my-8 ">
+            <div className="w-full md:w-full md:max-w-4xl m-4 mb-6 md:m-8 ">
+                <div className="md:hidden mb-8 mt-2 flex flex-col items-center justify-center gap-2">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center">
+                        Nos produits & Services
+                    </h2>
+                    <p className="text-gray-600 text-sm md:text-xl text-center">
+                        Découvrez une sélection de nos produits phares, nouveautés et offres incontournables.
+                    </p>
+                </div>
                 <div
                     className="relative bg-white rounded-3xl shadow-xs border-orange-600/20 border-2 hover:shadow-xl overflow-hidden flex flex-col md:flex-row items-stretch min-h-[340px] md:min-h-[320px] transition-all duration-500 group">
                     {/* Image */}
@@ -70,15 +78,15 @@ export default function ProductsCarousel() {
 					</span>
                     </div>
                     {/* Infos */}
-                    <div className="flex-1 flex flex-col justify-center p-8 gap-3 animate-fadeInRight md:pr-20">
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1 animate-fadeInUp delay-100">
+                    <div className="flex-1 flex flex-col justify-center md:ml-4 p-6 animate-fadeInRight md:pr-20">
+                        <h3 className="text-xl md:text-3xl font-bold text-gray-800 text-center md:text-left animate-fadeInUp delay-100 line-clamp-2 min-h-[2.7em]">
                             {products[current].title}
                         </h3>
-                        <p className="text-gray-600 mb-4 animate-fadeInUp delay-200">
+                        <p className="text-gray-600 md:text-lg animate-fadeInUp delay-200 line-clamp-3 mb-4 min-h-[4.5em]">
                             {products[current].description}
                         </p>
                         <Link href="#"
-                              className="self-start bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-xl shadow transition-all duration-200 animate-fadeInUp cursor-pointer">
+                              className="md:self-start self-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-xl shadow transition-all duration-200 animate-fadeInUp cursor-pointer">
                             En savoir plus
                         </Link>
                     </div>
