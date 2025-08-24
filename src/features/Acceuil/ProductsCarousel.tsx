@@ -8,28 +8,28 @@ const products = [
         title: "Assurance Auto",
         description:
             "Protégez votre véhicule et vos proches avec nos formules adaptées.",
-        image: "/image/particuliers.jpg",
+        image: "/image/particuliers.webp",
         tag: "Populaire",
     },
     {
         title: "Assurance Habitation",
         description:
             "Sécurisez votre maison ou appartement contre tous les risques.",
-        image: "/image/entreprises.jpg",
+        image: "/image/entreprises.webp",
         tag: "Nouveau",
     },
     {
         title: "Assurance Santé",
         description:
             "Des garanties santé pour toute la famille, à prix compétitif.",
-        image: "/image/professionels.jpg",
+        image: "/image/professionels.webp",
         tag: "Recommandé",
     },
     {
         title: "Assurance Voyage",
         description:
             "Voyagez l’esprit tranquille avec nos couvertures internationales.",
-        image: "/image/particuliers.jpg",
+        image: "/image/entreprises.webp",
         tag: "Sérénité",
     },
 ];

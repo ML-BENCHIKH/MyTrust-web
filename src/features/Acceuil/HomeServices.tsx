@@ -4,19 +4,19 @@ import Link from "next/link";
 const cards = [
     {
         title: "Particuliers",
-        image: "/image/particuliers.jpg",
+        image: "/image/particuliers.webp",
         alt: "Particuliers",
         description: "Assurance pour les Particuliers : protégez votre famille et vos biens.",
     },
     {
         title: "Professionnels",
-        image: "/image/professionels.jpg",
+        image: "/image/professionels.webp",
         alt: "Professionnels",
         description: "Assurance pour les Professionnels : des solutions adaptées à vos besoins.",
     },
     {
         title: "Entreprises",
-        image: "/image/entreprises.jpg",
+        image: "/image/entreprises.webp",
         alt: "Entreprises",
         description: "Assurance pour les Entreprises : protégez votre activité avec nos solutions sur mesure.",
     },
@@ -71,7 +71,7 @@ export default function HomeServices() {
                             <div key={card.title}
                                  className="flex flex-col items-center flex-1 group relative justify-center">
                                 <div
-                                    className="relative mb-5 w-[88vw] md:w-[360px] h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group cursor-default transition-all duration-300 border-2 border-amber-600/25 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
+                                    className="relative mb-5 w-[88vw] md:w-[360px] h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group cursor-default transition-all duration-300 border-orange-600/50 border-2 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
                                     <Image
                                         src={card.image}
                                         alt={card.alt}
