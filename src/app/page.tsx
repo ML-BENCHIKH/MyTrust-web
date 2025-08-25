@@ -3,6 +3,7 @@ import HomeServices from "@/features/Acceuil/HomeServices";
 import ProductsCarousel from "@/features/Acceuil/ProductsCarousel";
 import AboutUsSection from '@/features/Acceuil/AboutUsSection';
 import NewsSection from "@/features/Acceuil/NewsSection";
+import TrustedBySection from "@/features/Acceuil/TrustedBySection";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
                 <HomeServices/>
                 <ProductsCarousel/>
                 <NewsSection/>
+                <TrustedBySection/>
                 <AboutUsSection/>
             </main>
         </>

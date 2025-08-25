@@ -125,3 +125,17 @@
     }
 }
 
+/* Animation ruban logos des partenaires */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@layer utilities {
+  .marquee { animation: marquee var(--duration, 30s) linear infinite; }
+  .marquee:hover { animation-play-state: paused; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none !important; transform: none !important; }
+}

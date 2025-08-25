@@ -43,7 +43,7 @@ export default function ProductsCarousel() {
 
     return (
         <div
-            className="flex flex-row w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 mb-3 md:mb-0">
+            className="flex flex-row w-[94vw] md:w-[96vw] max-w-full mx-auto relative justify-center overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 mb-3 md:mb-0">
             <div className="hidden md:flex mb-8 ml-4 flex-col items-center justify-center gap-4">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center">
                     Nos produits & Services
@@ -64,7 +64,7 @@ export default function ProductsCarousel() {
                 <div
                     className="relative bg-white rounded-3xl shadow-xs border-orange-600/20 border-2 hover:shadow-xl overflow-hidden flex flex-col md:flex-row items-stretch min-h-[340px] md:min-h-[320px] transition-all duration-500 group">
                     {/* Image */}
-                    <div className="md:w-1/2 w-full h-56 md:h-auto relative flex items-center justify-center">
+                    <article className="md:w-1/2 w-full h-56 md:h-auto relative flex items-center justify-center">
                         <Image
                             src={products[current].image}
                             alt={products[current].title}
@@ -76,7 +76,7 @@ export default function ProductsCarousel() {
                             className="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">
 						{products[current].tag}
 					</span>
-                    </div>
+                    </article>
                     {/* Infos */}
                     <div className="flex-1 flex flex-col justify-center md:ml-4 p-6 animate-fadeInRight md:pr-20">
                         <h3 className="text-xl md:text-3xl font-bold text-gray-800 text-center md:text-left animate-fadeInUp delay-100 line-clamp-2 min-h-[2.7em]">
