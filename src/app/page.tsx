@@ -4,6 +4,8 @@ import ProductsCarousel from "@/features/Acceuil/ProductsCarousel";
 import AboutUsSection from '@/features/Acceuil/AboutUsSection';
 import NewsSection from "@/features/Acceuil/NewsSection";
 import TrustedBySection from "@/features/Acceuil/TrustedBySection";
+import MapSectionWrapper from "@/features/Acceuil/map_section/MapSectionWrapper";
+
 
 export default function Home() {
     return (
@@ -14,6 +16,7 @@ export default function Home() {
                 <ProductsCarousel/>
                 <NewsSection/>
                 <TrustedBySection/>
+                <MapSectionWrapper/>
                 <AboutUsSection/>
             </main>
         </>

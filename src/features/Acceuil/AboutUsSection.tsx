@@ -26,7 +26,7 @@ export default function AboutUsSection() {
                 </div>
                 {/* Description */}
                 <div className="flex-1 flex flex-col justify-center items-center md:items-start">
-                    <h2 className="text-2xl md:text-3xl font-bold text-orange-600 tracking-tight mb-4 text-center md:text-left">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 tracking-tight mb-4 text-center md:text-left">
                         Nous connaître
                     </h2>
                     <p className="text-gray-700 text-[1rem] px-4 md:px-0 md:text-lg leading-relaxed text-center md:text-left">
