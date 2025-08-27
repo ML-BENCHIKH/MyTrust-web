@@ -1,7 +1,7 @@
 import Navbar from "@/features/Acceuil/Navbar";
 import HomeServices from "@/features/Acceuil/HomeServices";
 import ProductsCarousel from "@/features/Acceuil/ProductsCarousel";
-import AboutUsSection from '@/features/Acceuil/AboutUsSection';
+import FooterSection from '@/features/Acceuil/FooterSection';
 import NewsSection from "@/features/Acceuil/NewsSection";
 import TrustedBySection from "@/features/Acceuil/TrustedBySection";
 import MapSectionWrapper from "@/features/Acceuil/map_section/MapSectionWrapper";
@@ -17,7 +17,7 @@ export default function Home() {
                 <NewsSection/>
                 <TrustedBySection/>
                 <MapSectionWrapper/>
-                <AboutUsSection/>
+                <FooterSection/>
             </main>
         </>
     );

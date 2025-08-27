@@ -4,8 +4,6 @@ import {useEffect} from 'react';
 import {MapContainer, TileLayer, Marker, Popup, useMap} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import Image from "next/image";
-import Link from "next/link";
 
 L.Icon.Default.mergeOptions({
     iconRetinaUrl: '/image/marker_full.webp',
