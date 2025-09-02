@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function FooterSection() {
+export default function FooterSection({showAbout = true}: { showAbout?: boolean }) {
     return (
         <section
             className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 px-1 py-8 pb-0 flex flex-col items-center mb-4 md:mb-0">
-            <div
+            {showAbout && (<div
                 className="w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mb-8 md:px-8">
                 {/* Logo desktop */}
                 <div className="hidden md:block flex-shrink-0 -ml-24 mt-14 mr-42 justify-start w-auto">
@@ -40,15 +40,16 @@ export default function FooterSection() {
                         l&#39;ensemble des opérations d&#39;assurance et de réassurance.
                     </p>
                 </div>
-            </div>
+            </div>)}
 
             {/* Footer */}
             <div className="w-full">
 
                 {/* Séparateur */}
-                <div className="w-full flex justify-center pt-2 mb-4">
-                    <div className="h-px w-1/3 md:w-1/3 bg-gray-300/50 rounded-full"/>
-                </div>
+                {showAbout &&
+                    (<div className="w-full flex justify-center pt-2 mb-4">
+                        <div className="h-px w-1/3 md:w-1/3 bg-gray-300/50 rounded-full"/>
+                    </div>)}
 
                 <div
                     className="w-full max-w-5xl mx-auto px-4 md:px-8 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">

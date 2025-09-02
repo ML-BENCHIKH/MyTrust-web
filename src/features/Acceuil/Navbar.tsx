@@ -21,20 +21,22 @@ function NavDesktop() {
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
                 {/* Logo */}
                 <div className="flex items-center space-x-2 py-10">
-                    <Image
-                        src="/logo-large.png"
-                        alt="Trust Assurances"
-                        width={150}
-                        height={40}
-                    />
+                    <Link href="/">
+                        <Image
+                            src="/logo-large.png"
+                            alt="Trust Assurances"
+                            width={150}
+                            height={40}
+                        />
+                    </Link>
                 </div>
                 {/* Liens principaux */}
                 <div className="hidden md:flex items-center space-x-6 ">
                     <AnimatedLink href="#">Particuliers</AnimatedLink>
                     <AnimatedLink href="#">Professionnels</AnimatedLink>
-                    <AnimatedLink href="#">Entreprises</AnimatedLink>
-                    <AnimatedLink href="#">Simulations</AnimatedLink>
-                    <AnimatedLink href="#">Trouver une agence</AnimatedLink>
+                    <AnimatedLink href="/entreprises">Entreprises</AnimatedLink>
+                    <AnimatedLink href="/simulation">Simulation</AnimatedLink>
+                    <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
                 </div>
                 {/* Bouton Espace clients */}
                 <AnimatedLink href="#">
@@ -108,8 +110,8 @@ function NavMobile() {
         {label: 'Particuliers', href: '#'},
         {label: 'Professionnels', href: '#'},
         {label: 'Entreprises', href: '#'},
-        {label: 'Simulations', href: '#'},
-        {label: 'Trouver une agence', href: '#'},
+        {label: 'Simulation', href: '/simulation'},
+        {label: 'Trouver une agence', href: '/#agences'},
         {label: 'Nous connaître', href: '#', subLinks: sousMenus["Nous connaître"]},
         {label: 'Notre Réseau', href: '#'},
         {label: 'Nos Partenaires', href: '#'},
@@ -128,10 +130,12 @@ function NavMobile() {
                 className="w-full bg-white/80 backdrop-blur-lg px-2 py-2 shadow-xs font-semibold fixed top-0 left-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-14">
                     <div className="flex items-center py-2">
-                        <Image src="/logo-large.png" alt="Trust Assurances"
-                               width={150}
-                               height={38}
-                        />
+                        <Link href="/">
+                            <Image src="/logo-large.png" alt="Trust Assurances"
+                                   width={150}
+                                   height={38}
+                            />
+                        </Link>
                     </div>
                     {/* Bouton burger */}
                     <button
@@ -158,6 +162,7 @@ function NavMobile() {
                             <div key={link.label} className="py-3 flex flex-col">
                                 <div className="flex items-center justify-between">
                                     <Link href={link.href}
+                                          onClick={() => setIsOpen(false)}
                                           className="text-gray-600 text-[1rem] font-semibold flex-1 focus:outline-none">
                                         {link.label}
                                     </Link>
