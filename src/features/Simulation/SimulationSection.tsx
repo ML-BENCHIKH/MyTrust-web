@@ -1,12 +1,22 @@
 "use client";
 
-import {useState} from "react";
+import {useRef, useEffect, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
 
 export default function SimulationSection() {
     const [currentType, setCurrentType] = useState<"auto" | "immobilier">("auto");
     const [showResult, setShowResult] = useState(false);
+
+    const resultRef = useRef<HTMLDivElement>(null);
+    const [shouldScroll, setShouldScroll] = useState(false);
+
+    useEffect(() => {
+        if (showResult && shouldScroll && resultRef.current) {
+            resultRef.current.scrollIntoView({behavior: "smooth", block: "center"});
+            setShouldScroll(false);
+        }
+    }, [showResult, shouldScroll]);
 
     return (
         <section
@@ -56,7 +66,12 @@ export default function SimulationSection() {
                         {/* Boutons continuer et réinitialiser */}
                         <div className="mt-5 flex gap-2">
                             <Button type="button" className="cursor-pointer"
-                                    onClick={() => setShowResult(true)}>Continuer</Button>
+                                    onClick={() => {
+                                        setShowResult(true);
+                                        setShouldScroll(true);
+                                    }}>
+                                Continuer
+                            </Button>
                             <Button type="button" className="cursor-pointer" variant="outline"
                                     onClick={() => setShowResult(false)}>Réinitialiser</Button>
                         </div>
@@ -65,7 +80,7 @@ export default function SimulationSection() {
 
             </div>
             {/* Formulaire résultats */}
-            <div className="items-center flex flex-col md:mt-8">
+            <div ref={resultRef}  className="items-center flex flex-col md:mt-8">
                 {showResult && (
                     <ResultCard type={currentType}/>
                 )}
