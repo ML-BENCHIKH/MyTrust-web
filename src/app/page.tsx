@@ -1,13 +1,23 @@
 import Navbar from "@/features/Acceuil/Navbar";
+import HomeServices from "@/features/Acceuil/HomeServices";
+import ProductsCarousel from "@/features/Acceuil/ProductsCarousel";
+import FooterSection from '@/features/Acceuil/FooterSection';
+import NewsSection from "@/features/Acceuil/NewsSection";
+import TrustedBySection from "@/features/Acceuil/TrustedBySection";
+import MapSectionWrapper from "@/features/Acceuil/map_section/MapSectionWrapper";
+
 
 export default function Home() {
     return (
         <>
             <Navbar/>
-            <main className="mt-32 w-full flex flex-col items-center justify-center min-h-[60vh]">
-                <div className="w-full max-w-4xl bg-gray-100 rounded-2xl shadow-inner p-12 flex flex-col items-center">
-                    <h1 className="text-3xl font-bold mb-4 text-gray-800">My Trust</h1>
-                </div>
+            <main className="w-full flex flex-col items-center mb-8 gap-0 md:gap-8 justify-center min-h-[60vh]">
+                <HomeServices/>
+                <ProductsCarousel/>
+                <NewsSection/>
+                <TrustedBySection/>
+                <MapSectionWrapper/>
+                <FooterSection/>
             </main>
         </>
     );

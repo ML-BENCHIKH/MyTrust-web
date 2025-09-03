@@ -1,2 +1,2 @@
 // shared/types/newsletter.ts
-export { type NewsletterFormData } from "@/Lib/validators";
+export { type NewsletterFormData } from "@/lib/validators";
