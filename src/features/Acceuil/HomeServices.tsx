@@ -28,7 +28,7 @@ const cards = [
 export default function HomeServices() {
     return (
         <section
-            className="relative w-full flex flex-col items-center justify-center py-20 md:py-18 overflow-hidden bg-gradient-to-br from-white via-white to-orange-200/60">
+            className="relative w-[96vw] px-1 py-3 mt-4 md:mt-0 md:w-full flex flex-col items-center justify-center md:py-18 overflow-hidden bg-white md:bg-gradient-to-br from-white via-white to-orange-200/60">
             <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-stretch">
                 <div className="flex-10/12 flex flex-col md:flex-col justify-center items-stretch relative ">
 
