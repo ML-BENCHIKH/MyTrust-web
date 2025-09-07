@@ -32,8 +32,8 @@ function NavDesktop() {
                 </div>
                 {/* Liens principaux */}
                 <div className="hidden md:flex items-center space-x-6 ">
-                    <AnimatedLink href="#">Particuliers</AnimatedLink>
-                    <AnimatedLink href="#">Professionnels</AnimatedLink>
+                    <AnimatedLink href="/particuliers">Particuliers</AnimatedLink>
+                    <AnimatedLink href="/professionels">Professionnels</AnimatedLink>
                     <AnimatedLink href="/entreprises">Entreprises</AnimatedLink>
                     <AnimatedLink href="/simulation">Simulation</AnimatedLink>
                     <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
@@ -55,7 +55,7 @@ function NavDesktop() {
         <div className="h-14 w-full"/>
         {/* Sous-menu */}
         <div
-            className="bg-red-50/85 shadow-xs text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block">
+            className="bg-orange-50/85 border-b-1 text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block">
             <div className="max-w-7xl mx-auto px-4 py-1 flex space-x-6">
                 <AnimatedLink
                     href="#"
@@ -107,7 +107,7 @@ function NavMobile() {
     };
 
     const links = [
-        {label: 'Particuliers', href: '#'},
+        {label: 'Particuliers', href: '/particuliers'},
         {label: 'Professionnels', href: '#'},
         {label: 'Entreprises', href: '#'},
         {label: 'Simulation', href: '/simulation'},
@@ -247,7 +247,7 @@ function AnimatedLink({href, children, className = "", subLinks, position = 0}: 
 
                 <div
                     style={{left: `calc(-7.8rem * ${position} + 15rem)`}}
-                    className="absolute top-full -translate-x-1/2 mt-0 min-w-140 bg-red-50/80 backdrop-blur-sm text-gray-600 border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50"
+                    className="absolute top-full -translate-x-1/2 mt-0 min-w-140 bg-orange-50/85 backdrop-blur-sm text-gray-600 border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50"
                 >
 
                     <div className="grid grid-cols-2 gap-6 py-2 px-4 min-w-[280px]">

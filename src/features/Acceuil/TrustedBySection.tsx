@@ -12,7 +12,7 @@ export default function TrustedBySection() {
 
     return (
         <section
-            className="w-full max-w-full px-0 relative overflow-hidden border border-orange-100 bg-orange-100/60 mt-2 mb-4 md:my-0 py-6 md:py-8"
+            className="w-full max-w-full px-0 relative overflow-hidden border border-orange-100/10 bg-gradient-to-br from-orange-50 via-white to-orange-100 mt-2 mb-4 md:my-0 py-6 md:py-8"
             aria-label="Nos partenaires"
         >
             <div className="px-0 md:px-0">

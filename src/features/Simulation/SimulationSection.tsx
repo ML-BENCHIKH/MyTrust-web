@@ -80,7 +80,7 @@ export default function SimulationSection() {
 
             </div>
             {/* Formulaire résultats */}
-            <div ref={resultRef}  className="items-center flex flex-col md:mt-8">
+            <div ref={resultRef} className="items-center flex flex-col md:mt-8">
                 {showResult && (
                     <ResultCard type={currentType}/>
                 )}
@@ -120,7 +120,7 @@ function ResultCard({type}: { type: "auto" | "immobilier" }) {
 
                 {/* Colonne vos informations */}
                 <div className="flex flex-col border-l pl-4">
-                    <p className="mb-4 font-semibold" >Vos informations</p>
+                    <p className="mb-4 font-semibold">Vos informations</p>
                     <div className="grid grid-rows-1 gap-y-3 text-sm ">
                         {isAuto ? (
                             <>
@@ -152,7 +152,7 @@ function ResultCard({type}: { type: "auto" | "immobilier" }) {
 
                 {/* Colonne détails */}
                 <div className="flex flex-col border-l px-4">
-                    <p className="mb-4 font-semibold" >Détails</p>
+                    <p className="mb-4 font-semibold">Détails</p>
                     <div className="grid grid-rows-1 gap-y-3 text-sm ">
                         {isAuto ? (
                             <>
@@ -184,10 +184,10 @@ function ResultCard({type}: { type: "auto" | "immobilier" }) {
                     </div>
                 </div>
             </div>
-
             <div className="mt-2 flex gap-2 p-4 justify-center">
-                <Button variant="default">Être contacté</Button>
-                <Button variant="outline" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>Revenir en haut</Button>
+                <Button className="cursor-pointer" variant="default">Être contacté</Button>
+                <Button className="cursor-pointer" variant="outline"
+                        onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>Revenir en haut</Button>
             </div>
         </div>
     );

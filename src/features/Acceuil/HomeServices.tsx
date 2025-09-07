@@ -7,25 +7,28 @@ const cards = [
         image: "/image/particuliers.webp",
         alt: "Particuliers",
         description: "Assurance pour les Particuliers : protégez votre famille et vos biens.",
+        link: "/particuliers"
     },
     {
         title: "Professionnels",
         image: "/image/professionels.webp",
         alt: "Professionnels",
         description: "Assurance pour les Professionnels : des solutions adaptées à vos besoins.",
+        link: "/professionnels"
     },
     {
         title: "Entreprises",
         image: "/image/entreprises.webp",
         alt: "Entreprises",
         description: "Assurance pour les Entreprises : protégez votre activité avec nos solutions sur mesure.",
+        link: "/entreprises"
     },
 ];
 
 export default function HomeServices() {
     return (
         <section
-            className="w-[96vw] max-w-full mx-auto relative overflow-hidden md:bg-gray-100/60 rounded-xl md:border-1 border-gray-100 px-1 py-3 mt-7">
+            className="relative w-full flex flex-col items-center justify-center py-20 md:py-18 overflow-hidden bg-gradient-to-br from-white via-white to-orange-200/60">
             <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-stretch">
                 <div className="flex-10/12 flex flex-col md:flex-col justify-center items-stretch relative ">
 
@@ -37,7 +40,7 @@ export default function HomeServices() {
 
                         </h1>
                         <span
-                            className="hidden md:block text-orange-600 font-black uppercase tracking-wider text-[2.5rem] text-center"
+                            className="hidden md:block text-orange-600 font-black uppercase tracking-wider text-[2.5rem] text-center "
                         >ASSURANCE&nbsp;!</span>
 
                     </div>
@@ -68,45 +71,46 @@ export default function HomeServices() {
                     <div
                         className="flex flex-col mx-0 bg-gray-100/80 py-3 md:py-0 md:bg-transparent rounded-lg md:flex-row gap-0 md:gap-6 justify-center items-stretch z-10 md:items-center">
                         {cards.map((card) => (
-                            <div key={card.title}
-                                 className="flex flex-col items-center flex-1 group relative justify-center">
+                            <Link href={card.link} key={card.link}>
                                 <div
-                                    className="relative mb-5 w-[88vw] md:w-[360px] h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group cursor-default transition-all duration-300 border-orange-600/50 border-2 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
-                                    <Image
-                                        src={card.image}
-                                        alt={card.alt}
-                                        fill
-                                        className="object-cover w-full h-full scale-105 group-hover:scale-110 transition-transform duration-500"
-                                        sizes="320px"
-                                        style={{zIndex: 0}}
-                                    />
-                                    {/* Titre sur la carte pour mobile */}
+                                     className="flex flex-col items-center flex-1 group relative justify-center">
                                     <div
-                                        className="absolute top-0 left-1/2 -translate-x-1/2 md:hidden z-20 pointer-events-none">
+                                        className="relative mb-5 w-[88vw] md:w-[360px] cursor-pointer h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group transition-all duration-300 border-orange-600/50 border-2 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
+                                        <Image
+                                            src={card.image}
+                                            alt={card.alt}
+                                            fill
+                                            className="object-cover w-full h-full scale-105 group-hover:scale-110 transition-transform duration-500"
+                                            sizes="320px"
+                                            style={{zIndex: 0}}
+                                        />
+                                        {/* Titre sur la carte pour mobile */}
+                                        <div
+                                            className="absolute top-0 left-1/2 -translate-x-1/2 md:hidden z-20 pointer-events-none">
                                         <span
                                             className="backdrop-blur-xs bg-orange-600/70 border border-white/15 shadow-sm rounded-b-2xl px-6 py-2 text-white/90 text-md font-extrabold tracking-tight drop-shadow-xs flex items-center justify-center w-fit max-w-[90vw] mx-auto">
                                             {card.title}
                                         </span>
-                                    </div>
-                                    <div
-                                        className="absolute inset-0 flex flex-col justify-end backdrop-blur-sm p-6 bg-[#E94A2C]/60 rounded-lg opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-350 z-20">
+                                        </div>
+                                        <div
+                                            className="absolute inset-0 flex flex-col justify-end backdrop-blur-sm p-6 bg-orange-600/30 rounded-lg opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-350 z-20">
 
-                                        <p className="text-white text-bold mb-6 drop-shadow-lg">{card.description}</p>
-                                        <Link
-                                            href={`/services/${card.title.toLowerCase()}`}
-                                            className="bg-[#E94A2C] text-white hover:bg-[#BD3014] cursor-pointer font-semibold px-6 py-2 rounded-xl transition">
-                                            En savoir plus
-                                        </Link>
+                                            <p className="text-white text-extrabold mb-6 drop-shadow-lg">{card.description}</p>
+                                            <p
+                                                className="bg-[#E94A2C] text-white hover:bg-[#BD3014] cursor-pointer font-semibold px-6 py-2 rounded-xl transition">
+                                                En savoir plus
+                                            </p>
+                                        </div>
+                                        <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none"/>
                                     </div>
-                                    <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none"/>
+                                    {/* Titre sous la carte pour desktop */}
+                                    <h1
+                                        className="hidden md:block text-[1.3rem] font-extrabold mb-3 text-orange-600 group-hover:scale-125 transition-all duration-250">
+                                        {card.title}
+                                    </h1>
+
                                 </div>
-                                {/* Titre sous la carte pour desktop */}
-                                <h1
-                                    className="hidden md:block text-[1.3rem] font-extrabold mb-3 text-orange-600/85 drop-shadow-xs">
-                                    {card.title}
-                                </h1>
-
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
