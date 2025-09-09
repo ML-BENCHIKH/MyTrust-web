@@ -39,7 +39,7 @@ function NavDesktop() {
                     <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
                 </div>
                 {/* Bouton Espace clients */}
-                <AnimatedLink href="#">
+                <AnimatedLink href="/auth/login">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
                          stroke="currentColor" className="w-6 h-6 mr-2">
                         <circle cx="12" cy="7" r="5" stroke="currentVolor" strokeWidth="2.5"/>
@@ -73,7 +73,7 @@ function NavDesktop() {
                     {label: 'Devenir agent général', href: '#'}
                 ]}
                 >Nous rejoindre</AnimatedLink>
-                <AnimatedLink position={3} href="#">Nos Partenaires</AnimatedLink>
+                <AnimatedLink position={3} href="/auth/login">Nos Partenaires</AnimatedLink>
             </div>
         </div>
     </div>);
