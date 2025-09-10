@@ -73,7 +73,7 @@ export default function HomeServices() {
                         {cards.map((card) => (
                             <Link href={card.link} key={card.link}>
                                 <div
-                                     className="flex flex-col items-center flex-1 group relative justify-center">
+                                    className="flex flex-col items-center flex-1 group relative justify-center">
                                     <div
                                         className="relative mb-5 w-[88vw] md:w-[360px] cursor-pointer h-[52vw] md:h-[250px] rounded-xl overflow-hidden shadow-xs bg-white group transition-all duration-300 border-orange-600/50 border-2 group-hover:border-[#E94A2C] group-hover:shadow-orange-200 group-hover:scale-105 flex flex-col justify-center hover:-translate-y-1">
                                         <Image
@@ -93,7 +93,7 @@ export default function HomeServices() {
                                         </span>
                                         </div>
                                         <div
-                                            className="absolute inset-0 flex flex-col justify-end backdrop-blur-sm p-6 bg-orange-600/30 rounded-lg opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-350 z-20">
+                                            className="absolute inset-0 flex flex-col justify-end backdrop-blur-sm p-6 bg-orange-900/20 rounded-lg opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-350 z-20">
 
                                             <p className="text-white text-extrabold mb-6 drop-shadow-lg">{card.description}</p>
                                             <p

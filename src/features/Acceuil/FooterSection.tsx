@@ -73,11 +73,11 @@ export default function FooterSection({showAbout = true}: { showAbout?: boolean 
                     <div>
                         <h3 className="text-gray-900 font-semibold mb-3">Navigation</h3>
                         <ul className="space-y-2 text-gray-700">
-                            <li><Link href="#" className="hover:text-orange-600">Particuliers</Link></li>
-                            <li><Link href="#" className="hover:text-orange-600">Professionnels</Link></li>
-                            <li><Link href="#" className="hover:text-orange-600">Entreprises</Link></li>
-                            <li><Link href="#" className="hover:text-orange-600">Simulations</Link></li>
-                            <li><Link href="#" className="hover:text-orange-600">Trouver une agence</Link></li>
+                            <li><Link href="/particuliers" className="hover:text-orange-600">Particuliers</Link></li>
+                            <li><Link href="/professionnels" className="hover:text-orange-600">Professionnels</Link></li>
+                            <li><Link href="/entreprises" className="hover:text-orange-600">Entreprises</Link></li>
+                            <li><Link href="/simulation" className="hover:text-orange-600">Simulations</Link></li>
+                            <li><Link href="/agences" className="hover:text-orange-600">Trouver une agence</Link></li>
                         </ul>
                     </div>
 

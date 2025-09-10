@@ -1,10 +1,14 @@
 import Image from "next/image";
 
 const logos = [
-    {src: "/logo-trust.png", alt: "Trust", href: "https://google.com"},
-    {src: "/next.svg", alt: "Next.js", href: "https://google.com"},
-    {src: "/globe.svg", alt: "Globe", href: "https://google.com"},
-    {src: "/window.svg", alt: "Window", href: "https://google.com"},
+    {src: "/image/confiance/arab-bank.webp", alt: "Arab Bank", href: "https://www.arabbank.dz/"},
+    {src: "/image/confiance/trust_bank.webp", alt: "Trust Bank", href: "https://www.trustbank.dz/"},
+    {src: "/image/confiance/bankabc.webp", alt: "Bank ABC", href: "https://www.bank-abc.com/fr/CountrySites/Algeria"},
+    {src: "/image/confiance/huawei.webp", alt: "Huawei", href: "https://www.huawei.com/"},
+    {src: "/image/confiance/kpmg.webp", alt: "KPMG", href: "https://kpmg.com/dz/"},
+    {src: "/image/confiance/liebherr.webp", alt: "Liebherr", href: "https://www.liebherr.com/"},
+    {src: "/image/confiance/schlum.webp", alt: "Schlumberger", href: "https://www.slb.com/"},
+    {src: "/image/confiance/amana.webp", alt: "Amana", href: "https://www.amana.dz/"},
 ];
 
 export default function TrustedBySection() {
@@ -25,9 +29,9 @@ export default function TrustedBySection() {
                 </div>
 
                 {/* Ruban défilant */}
-                <div className="relative overflow-hidden my-2">
+                <div className="relative overflow-hidden">
                     <div className="whitespace-nowrap">
-                        <div className="marquee inline-flex items-center gap-10 md:gap-14 will-change-transform w-max">
+                        <div className="marquee inline-flex items-center gap-10 md:gap-12 will-change-transform w-max">
                             {repeated.map((logo, i) => (
                                 <div key={`${logo.alt}-${i}`}
                                      className="inline-flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
@@ -40,9 +44,9 @@ export default function TrustedBySection() {
                                         <Image
                                             src={logo.src}
                                             alt={logo.alt}
-                                            width={140}
-                                            height={48}
-                                            className="h-8 md:h-10 w-auto object-contain"
+                                            width={250}
+                                            height={250}
+                                            className="h-14 md:h-22 w-auto object-contain"
                                         />
                                     </a>
                                 </div>

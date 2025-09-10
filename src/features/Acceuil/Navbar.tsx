@@ -3,24 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import {useState, useEffect} from "react";
 
-export default function Navbar() {
+export default function Navbar({pro = false}: { pro?: boolean }) {
 
     return (
         <>
-            <NavDesktop/>
+            <NavDesktop pro={pro}/>
             <NavMobile/>
         </>
     );
 }
 
-function NavDesktop() {
+function NavDesktop({pro = false}: { pro: boolean }) {
     return (<div className="hidden md:block">
         <nav
             className="w-full bg-white/85 backdrop-blur-lg h-16 py-1 text-sm shadow-xs font-semibold fixed top-0 left-0 z-50">
             {/* Barre de navigation principale */}
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
                 {/* Logo */}
-                <div className="flex items-center space-x-2 py-10">
+                <div className="flex items-center space-x-2 mr-4 py-10">
                     <Link href="/">
                         <Image
                             src="/logo-large.png"
@@ -33,13 +33,13 @@ function NavDesktop() {
                 {/* Liens principaux */}
                 <div className="hidden md:flex items-center space-x-6 ">
                     <AnimatedLink href="/particuliers">Particuliers</AnimatedLink>
-                    <AnimatedLink href="/professionels">Professionnels</AnimatedLink>
+                    <AnimatedLink href="/professionnels">Professionnels</AnimatedLink>
                     <AnimatedLink href="/entreprises">Entreprises</AnimatedLink>
                     <AnimatedLink href="/simulation">Simulation</AnimatedLink>
                     <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
                 </div>
                 {/* Bouton Espace clients */}
-                <AnimatedLink href="#">
+                <AnimatedLink href="#" className="ml-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
                          stroke="currentColor" className="w-6 h-6 mr-2">
                         <circle cx="12" cy="7" r="5" stroke="currentVolor" strokeWidth="2.5"/>
@@ -55,9 +55,9 @@ function NavDesktop() {
         <div className="h-14 w-full"/>
         {/* Sous-menu */}
         <div
-            className="bg-orange-50/85 border-b-1 text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block">
+            className={`${pro ? "bg-red-50/85" : "bg-orange-50/85"} border-b-1 text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block`}>
             <div className="max-w-7xl mx-auto px-4 py-1 flex space-x-6">
-                <AnimatedLink
+                <AnimatedLink pro={pro}
                     href="#"
                     subLinks={[
                         {label: 'Mot du DG', href: '#'},
@@ -67,7 +67,7 @@ function NavDesktop() {
                     ]}
                 >Nous connaître</AnimatedLink>
                 <AnimatedLink position={1} href="#">Notre Réseau</AnimatedLink>
-                <AnimatedLink position={2} href="#" subLinks={[
+                <AnimatedLink pro={pro} position={2} href="#" subLinks={[
                     {label: 'Contactez-nous', href: '#'},
                     {label: 'Recrutements', href: '#'},
                     {label: 'Devenir agent général', href: '#'}
@@ -108,7 +108,7 @@ function NavMobile() {
 
     const links = [
         {label: 'Particuliers', href: '/particuliers'},
-        {label: 'Professionnels', href: '#'},
+        {label: 'Professionnels', href: '/professionnels'},
         {label: 'Entreprises', href: '#'},
         {label: 'Simulation', href: '/simulation'},
         {label: 'Trouver une agence', href: '/#agences'},
@@ -221,7 +221,8 @@ function NavMobile() {
     );
 }
 
-function AnimatedLink({href, children, className = "", subLinks, position = 0}: {
+function AnimatedLink({pro = false, href, children, className = "", subLinks, position = 0}: {
+    pro?: boolean,
     href: string;
     children: React.ReactNode;
     className?: string;
@@ -247,7 +248,7 @@ function AnimatedLink({href, children, className = "", subLinks, position = 0}: 
 
                 <div
                     style={{left: `calc(-7.8rem * ${position} + 15rem)`}}
-                    className="absolute top-full -translate-x-1/2 mt-0 min-w-140 bg-orange-50/85 backdrop-blur-sm text-gray-600 border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50"
+                    className={`${pro ? "bg-red-50/85" : "bg-orange-50/85"} absolute top-full -translate-x-1/2 mt-0 min-w-140 backdrop-blur-sm text-gray-600 border-1 border-t-0 rounded-b-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50`}
                 >
 
                     <div className="grid grid-cols-2 gap-6 py-2 px-4 min-w-[280px]">
