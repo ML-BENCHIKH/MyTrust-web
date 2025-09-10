@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollIndictaor from "@/features/ScrollIndicator";
 
 export default function HeroSection({pro = false, titre, description_top, description_bot, image,}:
                                     {
@@ -45,12 +46,7 @@ export default function HeroSection({pro = false, titre, description_top, descri
                     </p>
                 </div>
             </div>
-
-            {/* Indicateur scroll */}
-            <div
-                className={`hidden md:block absolute bottom-6 animate-bounce ${pro ? "text-red-600" : "text-orange-600"}`}>
-                <span className="text-xl">▼</span>
-            </div>
+            <ScrollIndictaor pro={pro}/>
         </section>
     );
 }

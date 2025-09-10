@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollIndictaor from "@/features/ScrollIndicator";
 
 const cards = [
     {
@@ -116,6 +117,7 @@ export default function HomeServices() {
                 </div>
             </div>
 
+            <ScrollIndictaor/>
         </section>
     );
 }
