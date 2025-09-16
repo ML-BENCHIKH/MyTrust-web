@@ -11,14 +11,14 @@ export default function HeroSection({pro = false, titre, description_top, descri
                                     }) {
     return (
         <section
-            className={`relative w-full h-[calc(100vh-7rem)] flex flex-col items-center justify-center py-12 md:py-24 overflow-hidden bg-gradient-to-br from-white via-white ${
+            className={`relative w-full h-[calc(100vh-7rem)] flex flex-col items-center justify-center md:py-24 overflow-hidden bg-gradient-to-br from-white via-white ${
                 pro ? "to-red-200/60" : "to-orange-200/60"
             }`}
         >
             <div
                 className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-y-12 md:gap-16 px-6 w-full max-w-7xl">
                 {/* Image */}
-                <div className="flex items-center justify-center w-full md:w-1/2">
+                <div className="flex items-center mt-4 md:mt-0 justify-center w-full md:w-1/2">
                     <Image
                         src={image}
                         alt={titre}
@@ -32,9 +32,9 @@ export default function HeroSection({pro = false, titre, description_top, descri
                 <div
                     className="flex flex-col items-center md:items-start text-center md:text-left gap-y-4 px-2 md:px-4 w-full md:w-1/2">
                     <h1
-                        className={`text-3xl sm:text-4xl md:text-5xl font-extrabold ${
+                        className={`text-3xl sm:text-4xl md:text-5xl font-semibold ${
                             pro ? "text-red-600" : "text-orange-600"
-                        } mb-4 tracking-tight leading-tight`}
+                        } mb-4`}
                     >
                         {titre}
                     </h1>

@@ -31,11 +31,7 @@ function InfoSection() {
 
             {/* En-tête */}
             <div className="flex flex-col items-center w-full text-center">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow mb-3">
-                    ASSURANCE VOYAGE
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-4 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-4 tracking-tight">
                     Assistance Voyage Internationale
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">
@@ -70,7 +66,7 @@ function InfoSection() {
                     <p className="text-gray-700 text-base">
                         Votre contrat couvre les principaux risques liés aux voyages internationaux.
                     </p>
-                    <ul className="space-y-4 text-gray-700 text-base">
+                    <ul className="space-y-4 text-gray-700 text-base bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-3">
                             <span className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
                             Frais médicaux et hospitalisation d’urgence
@@ -93,7 +89,7 @@ function InfoSection() {
                     <p className="text-gray-700 text-base">
                         Un imprévu à l’étranger ? Notre réseau international est là pour vous aider.
                     </p>
-                    <ul className="space-y-4 text-gray-700 text-base">
+                    <ul className="space-y-4 text-gray-700 text-base bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-3">
                             <span className="w-2 h-2 bg-emerald-800 rounded-full mt-2 flex-shrink-0"></span>
                             Assistance téléphonique multilingue 24h/24

@@ -54,7 +54,7 @@ export default function MapSection() {
         <div
             className="flex flex-row w-[94vw] md:w-[96vw] max-w-full mx-auto relative justify-center overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 mb-3 md:mb-0">
             <div className="hidden md:flex mb-8 ml-4 flex-col items-center justify-center gap-4">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-orange-600 text-center">
                     Nos agences
                 </h2>
                 <p className="text-gray-600 text-[1rem] md:text-xl text-center">

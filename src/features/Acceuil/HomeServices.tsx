@@ -4,18 +4,18 @@ import ScrollIndictaor from "@/features/ScrollIndicator";
 
 const cards = [
     {
-        title: "Particuliers",
-        image: "/image/particuliers.webp",
-        alt: "Particuliers",
-        description: "Assurance pour les Particuliers : protégez votre famille et vos biens.",
-        link: "/particuliers"
-    },
-    {
         title: "Professionnels",
         image: "/image/professionels.webp",
         alt: "Professionnels",
         description: "Assurance pour les Professionnels : des solutions adaptées à vos besoins.",
         link: "/professionnels"
+    },
+    {
+        title: "Particuliers",
+        image: "/image/particuliers.webp",
+        alt: "Particuliers",
+        description: "Assurance pour les Particuliers : protégez votre famille et vos biens.",
+        link: "/particuliers"
     },
     {
         title: "Entreprises",
@@ -36,21 +36,21 @@ export default function HomeServices() {
                     {/* Titre d'accroche desktop */}
                     <div className="flex items-center justify-center gap-3 mt-0 md:mb-6">
                         <h1
-                            className="hidden md:block text-3xl text-right md:text-4xl font-extrabold md:text-center text-gray-600 leading-tight">
+                            className="hidden md:block text-3xl text-right md:text-4xl font-bold md:text-center text-gray-600 leading-tight">
                             Sérénité, confiance, mais avant tout...
 
                         </h1>
                         <span
-                            className="hidden md:block text-orange-600 font-black uppercase tracking-wider text-[2.5rem] text-center "
+                            className="hidden md:block text-orange-600 font-bold uppercase tracking-wider text-[2.5rem] text-center "
                         >ASSURANCE&nbsp;!</span>
 
                     </div>
                     {/* Titre d'accroche mobile */}
                     <div className="block md:hidden bg-gray-100/80 border-gray-100 rounded-lg px-2 py-2 text-right">
-                        <h1 className="text-3xl font-extrabold mb-2 text-gray-600 leading-tight">
+                        <h1 className="text-3xl font-bold mb-2 text-gray-600 leading-tight">
                             Sérénité, confiance, mais avant tout...
                         </h1>
-                        <span className="text-[#E94A2C] font-black uppercase tracking-wider text-4xl"
+                        <span className="text-[#E94A2C] font-bold uppercase tracking-wider text-4xl"
                         >ASSURANCE&nbsp;!</span>
                     </div>
                     <div className="w-full flex justify-center mb-3 md:mb-9">
@@ -84,6 +84,7 @@ export default function HomeServices() {
                                             className="object-cover w-full h-full scale-105 group-hover:scale-110 transition-transform duration-500"
                                             sizes="320px"
                                             style={{zIndex: 0}}
+                                            priority
                                         />
                                         {/* Titre sur la carte pour mobile */}
                                         <div

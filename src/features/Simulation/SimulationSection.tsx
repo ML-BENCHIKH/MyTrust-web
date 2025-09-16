@@ -25,7 +25,7 @@ export default function SimulationSection() {
 
                 {/* Titre et description */}
                 <div className="md:w-5/12 flex flex-col md:mt-7 md:ml-7 gap-3 ml-4">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600">Simulateur</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-orange-600">Simulateur</h2>
                     <p className="text-gray-600">Choisissez un type et remplissez les informations pour démarrer votre
                         simulation.</p>
                     <ul className="text-sm text-gray-500 list-disc ml-5 space-y-1">

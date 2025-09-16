@@ -66,29 +66,9 @@ export default function ParticuliersPage() {
                     produits={produits}
                 />
                 <AvantagesSection/>
-                <TemoignageSection/>
                 <HelpButton/>
                 <FooterSection showAbout={false}/>
             </main>
         </>
-    );
-}
-
-function TemoignageSection() {
-    return (
-        <section className="w-full flex flex-col items-center py-16 px-4">
-            <div
-                className="relative max-w-2xl w-full bg-white/90 rounded-3xl shadow-lg p-12 border border-orange-100 flex flex-col items-center">
-                <Image src="/image/particuliers.webp" alt="Nadia B." width={80} height={80}
-                       className="rounded-full border-4 border-orange-200 shadow mb-6 object-cover"/>
-                <p className="text-2xl italic text-gray-700 mb-6 text-center font-light leading-relaxed">“Service
-                    rapide, équipe à l’écoute et prise en charge efficace lors de mon sinistre auto. Je recommande Trust
-                    les yeux fermés !”</p>
-                <div className="flex flex-col items-center">
-                    <span className="font-bold text-orange-600">Nadia B.</span>
-                    <span className="text-gray-500 text-base font-light">Cliente Trust Assurances</span>
-                </div>
-            </div>
-        </section>
     );
 }

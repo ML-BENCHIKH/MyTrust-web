@@ -9,25 +9,46 @@ export default function EntreprisesPage() {
 
     const produits = [
         {
-            image: "/image/professionnels/vehicule_pro.webp",
-            title: "Véhicule Pro",
-            badge: "Véhicule",
-            link: "/professionnels/vehiculepro",
-            desc: "Protégez vos véhicules professionnels contre les accidents, le vol et les imprévus du quotidien."
-        },
-        {
-            image: "/image/professionnels/rc_pro.webp",
-            title: "Responsabilité Civile Pro",
+            image: "/image/entreprises/rcentreprises.webp",
+            title: "RC Entreprises",
             badge: "RC",
-            desc: "Couvrez vous contre les dommages causés à des tiers dans le cadre de votre activité.",
-            link: "/professionnels/rcpro"
+            link: "/entreprises/rcentreprises",
+            desc: "Une couverture essentielle pour sécuriser votre responsabilité civile et protéger vos activités contre les dommages causés à des tiers."
         },
         {
-            image: "/image/professionnels/multirisques_pro.webp",
-            title: "Multirisques Professionnelle",
+            image: "/image/entreprises/engineering.webp",
+            title: "Assurance Engineering",
+            badge: "ENGINEERING",
+            desc: "Protégez vos chantiers, vos équipements et vos responsabilités contre les imprévus techniques et financiers.",
+            link: "/entreprises/engineering"
+        },
+        {
+            image: "/image/entreprises/transport.webp",
+            title: "Marchandises Transportées",
+            badge: "TRANSPORT",
+            desc: "Une couverture fiable pour sécuriser vos biens contre les risques de transport, qu’ils soient terrestres, maritimes ou aériens.",
+            link: "/entreprises/marchandises"
+        },
+        {
+            image: "/image/entreprises/patrimoine.webp",
+            title: "Assurance Patrimoine",
+            badge: "patrimoine",
+            desc: "Des solutions complètes pour sécuriser vos actifs essentiels face aux sinistres et incidents majeurs.",
+            link: "/entreprises/patrimoine"
+        },
+        {
+            image: "/image/entreprises/risquesspeciaux.webp",
+            title: "Risques Spéciaux",
             badge: "Multirisques",
-            desc: "Une protection complète pour vos locaux et équipements contre les principaux risques.",
-            link: "/professionnels/multirisquespro"
+            desc: "Des couvertures ciblées pour protéger vos activités face aux imprévus..",
+            link: "/entreprises/risquesspeciaux"
+        },
+        {
+            image: "/image/entreprises/prevoyance.webp",
+            title: "Prévoyance Collective",
+            badge: "prévoyance",
+            desc: "Des solutions adaptées au bien-être de vos salariés et à la sécurité de votre entreprise.",
+            link: "/entreprises/prevoyance"
         }
     ];
 

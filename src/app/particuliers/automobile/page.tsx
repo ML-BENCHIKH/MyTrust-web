@@ -31,11 +31,7 @@ function InfoSection() {
 
             {/* En-tête */}
             <div className="flex flex-col items-center text-center">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow mb-3">
-                    ASSURANCE AUTO
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-4 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-4 tracking-tight">
                     Votre véhicule, protégé à chaque trajet
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">
@@ -189,11 +185,7 @@ function ASavoirSection() {
 
             {/* En-tête */}
             <div className="flex flex-col items-center text-center mb-10">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow mb-3">
-                    À SAVOIR
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-3">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-3">
                     Ce qu’il faut savoir
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">

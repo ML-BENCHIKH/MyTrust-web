@@ -50,7 +50,7 @@ export default function NewsSection() {
                     href="/actualites/"
                     className="group flex items-center gap-2 transition-all duration-300 hover:scale-105 cursor-pointer"
                 >
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center group-hover:text-orange-700 transition-colors duration-300">
+                    <h2 className="text-2xl md:text-3xl font-bold text-orange-600 text-center group-hover:text-orange-700 transition-colors duration-300">
                         Actualités
                     </h2>
                     <svg

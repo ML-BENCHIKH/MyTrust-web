@@ -18,9 +18,9 @@ function NavDesktop({pro = false}: { pro: boolean }) {
         <nav
             className="w-full bg-white/85 backdrop-blur-lg h-16 py-1 text-sm shadow-xs font-semibold fixed top-0 left-0 z-50">
             {/* Barre de navigation principale */}
-            <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+            <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
                 {/* Logo */}
-                <div className="flex items-center space-x-2 mr-4 py-10">
+                <div className="flex items-center space-x-2 py-10">
                     <Link href="/">
                         <Image
                             src="/logo-large.png"
@@ -31,15 +31,21 @@ function NavDesktop({pro = false}: { pro: boolean }) {
                     </Link>
                 </div>
                 {/* Liens principaux */}
-                <div className="hidden md:flex items-center space-x-6 ">
-                    <AnimatedLink href="/particuliers">Particuliers</AnimatedLink>
-                    <AnimatedLink href="/professionnels">Professionnels</AnimatedLink>
-                    <AnimatedLink href="/entreprises">Entreprises</AnimatedLink>
-                    <AnimatedLink href="/simulation">Simulation</AnimatedLink>
-                    <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
+                <div className="hidden md:flex items-center space-x-20 ">
+                    <div className="flex items-center space-x-6 ">
+                        <AnimatedLink href="/particuliers">Particuliers</AnimatedLink>
+                        <AnimatedLink href="/professionnels">Professionnels</AnimatedLink>
+                        <AnimatedLink href="/entreprises">Entreprises</AnimatedLink>
+                    </div>
+                    <div className="flex items-center space-x-6 ">
+                        <AnimatedLink href="/simulation">Simulation</AnimatedLink>
+                        <AnimatedLink href="/agences">Trouver une agence</AnimatedLink>
+                        <AnimatedLink href="/contact">Contact</AnimatedLink>
+
+                    </div>
                 </div>
                 {/* Bouton Espace clients */}
-                <AnimatedLink href="#" className="ml-4">
+                <AnimatedLink href="/espace-client">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
                          stroke="currentColor" className="w-6 h-6 mr-2">
                         <circle cx="12" cy="7" r="5" stroke="currentVolor" strokeWidth="2.5"/>
@@ -58,17 +64,17 @@ function NavDesktop({pro = false}: { pro: boolean }) {
             className={`${pro ? "bg-red-50/85" : "bg-orange-50/85"} border-b-1 text-[0.83rem] font-semibold mt-2 pt-3 pb-1 transition-all duration-300 hidden md:block`}>
             <div className="max-w-7xl mx-auto px-4 py-1 flex space-x-6">
                 <AnimatedLink pro={pro}
-                    href="#"
-                    subLinks={[
-                        {label: 'Mot du DG', href: '#'},
-                        {label: 'Notre Staff', href: '#'},
-                        {label: 'Trust Assurances', href: '#'},
-                        {label: 'Notre Groupe', href: '#'},
-                    ]}
+                              href="#"
+                              subLinks={[
+                                  {label: 'Mot du DG', href: '#'},
+                                  {label: 'Notre Staff', href: '#'},
+                                  {label: 'Trust Assurances', href: '#'},
+                                  {label: 'Notre Groupe', href: '#'},
+                              ]}
                 >Nous connaître</AnimatedLink>
                 <AnimatedLink position={1} href="#">Notre Réseau</AnimatedLink>
                 <AnimatedLink pro={pro} position={2} href="#" subLinks={[
-                    {label: 'Contactez-nous', href: '#'},
+                    {label: 'Contactez-nous', href: '/contact'},
                     {label: 'Recrutements', href: '#'},
                     {label: 'Devenir agent général', href: '#'}
                 ]}
@@ -100,7 +106,7 @@ function NavMobile() {
             {label: 'Notre Groupe', href: '#'},
         ],
         "Nous rejoindre": [
-            {label: 'Contactez-nous', href: '#'},
+            {label: 'Contactez-nous', href: '/contact'},
             {label: 'Recrutements', href: '#'},
             {label: 'Devenir agent général', href: '#'},
         ]
@@ -109,13 +115,14 @@ function NavMobile() {
     const links = [
         {label: 'Particuliers', href: '/particuliers'},
         {label: 'Professionnels', href: '/professionnels'},
-        {label: 'Entreprises', href: '#'},
+        {label: 'Entreprises', href: '/entreprises'},
         {label: 'Simulation', href: '/simulation'},
-        {label: 'Trouver une agence', href: '/#agences'},
+        {label: 'Trouver une agence', href: '/agences'},
         {label: 'Nous connaître', href: '#', subLinks: sousMenus["Nous connaître"]},
         {label: 'Notre Réseau', href: '#'},
         {label: 'Nos Partenaires', href: '#'},
         {label: 'Nous rejoindre', href: '#', subLinks: sousMenus["Nous rejoindre"]},
+        {label: 'Contact', href: '/contact'}
 
     ];
 
@@ -156,14 +163,14 @@ function NavMobile() {
             <div
                 className={`fixed top-16 left-0 w-full h-full bg-white/85 backdrop-blur-lg shadow-lg z-40 transition-all duration-300 ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'} max-h-[calc(100vh-4rem)] overflow-y-auto`}
             >
-                <div className="max-w-7xl mx-auto px-4 py-4">
-                    <div className="flex flex-col divide-y divide-gray-200">
+                <div className="max-w-7xl mx-auto px-8 py-4">
+                    <div className="flex flex-col">
                         {links.map((link) => (
                             <div key={link.label} className="py-3 flex flex-col">
                                 <div className="flex items-center justify-between">
                                     <Link href={link.href}
                                           onClick={() => setIsOpen(false)}
-                                          className="text-gray-600 text-[1rem] font-semibold flex-1 focus:outline-none">
+                                          className="text-gray-700 text-[1rem] font-semibold tracking-tight flex-1 focus:outline-none">
                                         {link.label}
                                     </Link>
                                     {link.subLinks && (

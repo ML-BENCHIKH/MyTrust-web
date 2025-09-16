@@ -32,11 +32,7 @@ function InfoSection() {
 
             {/* En-tête */}
             <div className="flex flex-col items-center w-full text-center">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-red-600 to-red-500 text-white text-xs font-semibold shadow mb-3">
-                    MON VÉHICULE PRO
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-red-600 mb-4 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-bold text-red-600 mb-4 tracking-tight">
                     Assurance Véhicule Professionnel
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">
@@ -73,8 +69,8 @@ function InfoSection() {
                         Ce contrat couvre vos véhicules contre les principaux risques professionnels.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <ul className="space-y-4 text-gray-700 text-base">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-100/60 rounded-xl p-6">
+                        <ul className="space-y-4  text-gray-700 text-base">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-red-800 rounded-full mt-2 flex-shrink-0"></span>
                                 Responsabilité civile professionnelle
@@ -108,7 +104,7 @@ function InfoSection() {
                     <p className="text-gray-700 text-base">
                         Une gestion optimisée de votre parc avec un suivi personnalisé et une assistance rapide.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-100/60 rounded-xl p-6">
                         <ul className="space-y-4 text-gray-700 text-base">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-emerald-800 rounded-full mt-2 flex-shrink-0"></span>

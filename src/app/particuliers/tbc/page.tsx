@@ -29,11 +29,7 @@ function InfoSection() {
         <section
             className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 px-1 py-4 md:py-8 flex flex-col items-center ">
             <div className="flex flex-col items-center w-full">
-                <div className="flex items-center gap-3 mb-2">
-                    <span
-                        className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow">NOUVEAU</span>
-                </div>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-4 tracking-tight text-center">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-4 tracking-tight text-center">
                     Trust Bon Conducteur
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 text-center max-w-2xl">
@@ -60,7 +56,7 @@ function InfoSection() {
                     <div className="flex items-center gap-2 mb-2">
                         <h3 className="text-xl font-semibold text-blue-800">Caractéristiques</h3>
                     </div>
-                    <ul className="space-y-3 text-gray-700">
+                    <ul className="space-y-3 text-gray-700 bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-3"><span
                             className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
                             Assurance tous risques au premier sinistre, tarification
@@ -88,7 +84,7 @@ function InfoSection() {
                     <div className="flex items-center gap-2 mb-2">
                         <h3 className="text-xl font-semibold text-emerald-800">Club & Avantages</h3>
                     </div>
-                    <ul className="space-y-3 text-gray-700">
+                    <ul className="space-y-3 text-gray-700 bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-4"><span
                             className="w-2 h-2 bg-emerald-800 rounded-full mt-2 flex-shrink-0"></span>
                             Moins chère que les offres classiques.

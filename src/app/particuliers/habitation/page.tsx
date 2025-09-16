@@ -29,11 +29,7 @@ function InfoSection() {
             className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 px-1 py-4 md:py-8 flex flex-col items-center">
             {/* En-tête */}
             <div className="flex flex-col items-center w-full text-center">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow mb-3">
-                    PROTECTION HABITATION
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-4 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-4 tracking-tight">
                     Assurance Multirisques Habitation
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">
@@ -69,7 +65,7 @@ function InfoSection() {
                         Ce contrat vous garantit une indemnité en cas de :
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-100/60 rounded-xl p-6">
                         <ul className="space-y-4 text-gray-700 text-base">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
@@ -104,7 +100,7 @@ function InfoSection() {
                     <p className="text-gray-700 text-base">
                         Un incident domestique ? Nos experts interviennent chez vous, 24h/24 et 7j/7.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-100/60 rounded-xl p-6">
                         <ul className="space-y-4 text-gray-700 text-base">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-emerald-800 rounded-full mt-2 flex-shrink-0"></span>

@@ -8,29 +8,25 @@ const products = [
         title: "Assurance Auto",
         description:
             "Protégez votre véhicule et vos proches avec nos formules adaptées.",
-        image: "/image/particuliers.webp",
+        image: "/image/particuliers/auto.webp",
         tag: "Populaire",
+        href: "/particuliers/automobile"
     },
     {
         title: "Assurance Habitation",
         description:
             "Sécurisez votre maison ou appartement contre tous les risques.",
-        image: "/image/entreprises.webp",
+        image: "/image/particuliers/habitation.webp",
         tag: "Nouveau",
-    },
-    {
-        title: "Assurance Santé",
-        description:
-            "Des garanties santé pour toute la famille, à prix compétitif.",
-        image: "/image/professionels.webp",
-        tag: "Recommandé",
+        href: "/particuliers/habitation"
     },
     {
         title: "Assurance Voyage",
         description:
             "Voyagez l’esprit tranquille avec nos couvertures internationales.",
-        image: "/image/entreprises.webp",
+        image: "/image/particuliers/voyage.webp",
         tag: "Sérénité",
+        href: "/particuliers/voyage"
     },
 ];
 
@@ -45,7 +41,7 @@ export default function ProductsCarousel() {
         <div
             className="flex flex-row w-[94vw] md:w-[96vw] max-w-full mx-auto relative justify-center overflow-hidden bg-gray-100/60 rounded-xl border-1 border-gray-100 mb-3 md:mb-0">
             <div className="hidden md:flex mb-8 ml-4 flex-col items-center justify-center gap-4">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-orange-600 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-orange-600 text-center">
                     Nos produits & Services
                 </h2>
                 <p className="text-gray-600 text-[1rem] md:text-xl text-center">
@@ -85,7 +81,7 @@ export default function ProductsCarousel() {
                         <p className="text-gray-600 md:text-lg animate-fadeInUp delay-200 line-clamp-3 mb-4 min-h-[4.5em]">
                             {products[current].description}
                         </p>
-                        <Link href="#"
+                        <Link href={products[current].href}
                               className="md:self-start self-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-xl shadow transition-all duration-200 animate-fadeInUp cursor-pointer">
                             En savoir plus
                         </Link>

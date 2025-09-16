@@ -23,7 +23,7 @@ export default function TrustedBySection() {
 
                 {/* Titre */}
                 <div className="flex items-center justify-center mb-4 md:mb-6">
-                    <h2 className="text-lg md:text-3xl text-center justify-center font-extrabold mb-4 text-orange-600">
+                    <h2 className="text-lg md:text-3xl text-center justify-center font-bold mb-4 text-orange-600">
                         Nos partenaires
                     </h2>
                 </div>

@@ -30,7 +30,7 @@ export default function AvantagesSection({pro = false}: { pro?: boolean }) {
 
             {/* En-tête */}
             <div className="relative z-10 text-center px-4">
-                <h3 className={`text-3xl md:text-4xl font-extrabold tracking-tight bg-clip-text ${pro ? "text-red-600" : "text-orange-600"}`}>Pourquoi
+                <h3 className={`text-3xl md:text-4xl font-bold tracking-tight bg-clip-text ${pro ? "text-red-600" : "text-orange-600"}`}>Pourquoi
                     choisir Trust ?</h3>
                 <p className="mt-3 text-gray-600 text-base md:text-lg font-light">Des garanties claires, une expérience
                     fluide et un accompagnement qui fait la différence.</p>

@@ -32,11 +32,7 @@ function InfoSection() {
 
             {/* En-tête */}
             <div className="flex flex-col items-center w-full text-center">
-                <span
-                    className="inline-flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-orange-600 to-orange-500 text-white text-xs font-semibold shadow mb-3">
-                    PLAISANCE EN TOUTE SÉRÉNITÉ
-                </span>
-                <h2 className="text-2xl md:text-4xl font-extrabold text-orange-600 mb-4 tracking-tight">
+                <h2 className="text-2xl md:text-4xl font-bold text-orange-600 mb-4 tracking-tight">
                     Assurance Bateau de Plaisance
                 </h2>
                 <p className="text-md md:text-lg text-gray-700 max-w-3xl">
@@ -71,7 +67,7 @@ function InfoSection() {
                         Protégez votre embarcation contre les imprévus : dommages matériels, aléas climatiques, vol ou
                         vandalisme.
                     </p>
-                    <ul className="space-y-4 text-gray-700 text-base">
+                    <ul className="space-y-4 text-gray-700 text-base bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-3">
                             <span className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
                             Dommages matériels au bateau (tous événements)
@@ -99,7 +95,7 @@ function InfoSection() {
                         Naviguez sans inquiétude : vous êtes couvert en cas de dommages causés à des tiers par votre
                         bateau.
                     </p>
-                    <ul className="space-y-4 text-gray-700 text-base">
+                    <ul className="space-y-4 text-gray-700 text-base bg-gray-100/60 rounded-xl p-6">
                         <li className="flex items-start gap-3">
                             <span className="w-2 h-2 bg-emerald-800 rounded-full mt-2 flex-shrink-0"></span>
                             Responsabilité civile plaisance

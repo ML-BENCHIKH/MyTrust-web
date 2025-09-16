@@ -12,7 +12,7 @@ export default function ProduitsSection({pro = false, produits}: {
             className="w-[94vw] md:w-[96vw] max-w-full mx-auto relative overflow-hidden bg-gray-100/60 rounded-xl mt-6 border-1 border-gray-100 px-1 py-8 flex flex-col items-center mb-6"
         >
             {/* Titre de section */}
-            <h2 className={`text-3xl md:text-4xl font-extrabold ${pro ? "text-red-600" : "text-orange-600"} mb-4 tracking-tight text-center`}>Nos
+            <h2 className={`text-3xl md:text-4xl font-bold ${pro ? "text-red-600" : "text-orange-600"} mb-4 tracking-tight text-center`}>Nos
                 solutions</h2>
 
             {/* Sous-titre */}
